@@ -113,3 +113,8 @@
 #see-all:hover {
   opacity: 90%;
 }
+/* Contact Section formatting */
+#contact-section {
+  width: 100%;
+  height: 25%;
+}
