@@ -3,7 +3,7 @@
 A fully responsive personal portfolio showcasing my projects and skills, built with HTML, CSS, and JavaScript. Designed with a modern UI, interactive navigation, and a mobile-first approach to ensure an optimal viewing experience across all devices.
 
 🔗 Live Demo
-View Portfolio (Update this with your actual URL once deployed!)
+View Portfolio: https://tubular-fenglisu-802de2.netlify.app/
 
 ✨ Features
 ✔️ Responsive Design – Works on all screen sizes (desktop, tablet, mobile).
@@ -17,8 +17,8 @@ View Portfolio (Update this with your actual URL once deployed!)
 (Add screenshots here for visual appeal! Example:)
 
 🛠 Tech Stack
-Frontend: HTML, CSS, JavaScript
-Deployment: GitHub Pages / Netlify / Vercel (Choose one and update when deployed!)
+Frontend: HTML and CSS
+Deployment: Netlify
 
 🚀 Getting Started
 To run the project locally:
@@ -26,7 +26,7 @@ Clone the repository: git clone https://github.com/GojuNoah/Personal-Portfolio.g
 Open index.html in your browser.
 
 📬 Contact
-Portfolio: your-portfolio.com (Update when live!)
-Email: your-email@example.com
+Portfolio: https://tubular-fenglisu-802de2.netlify.app/
+Email: gojunoah@gmail.com
 GitHub: GojuNoah
-LinkedIn: Your LinkedIn (Optional: Add if you have one!)
+LinkedIn: https://www.linkedin.com/in/noah-stone-5b3689190/
