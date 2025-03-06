@@ -7,21 +7,21 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 /* Navbar */
 #navbar {
   position: fixed;
   top: 0;
-  width: 100%;
-  background-color: #31511E;
+  width: 100vw;
+  background-color: #00171F;
   padding: 5px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   z-index: 1000;
   height: 60px;
-  border: 2px solid red;
 }
 #navbar ul {
   list-style: none;
@@ -35,7 +35,7 @@ body {
   text-decoration: none; 
   color: white;
   font-family: Tinos;
-  font-size: larger;
+  font-size: x-large;
 }
 #navbar a:hover {
   color: #1A1A19;
@@ -49,7 +49,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #1A1A19;
+  background-color: #003459;
+  font-size: x-large;
+}
+#pfp {
+  height: 275px;
+  width: 225px;
+  margin: 5px;
+  border-radius: 125px;
 }
 #intro {
   font-family: Tinos;
@@ -57,15 +64,13 @@ body {
 }
 #desc {
   font-family: Caveat;
-  color: #31511E;
+  color: #00171F;
 }
 
 /* project tile section */
 #projects {
   width: 100%;
   background-color: #F6FCDF;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   height: 100%;
 }
 #project-transition {
