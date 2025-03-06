@@ -109,6 +109,21 @@ body {
   font-size: 35px;
   padding: 5px;
 }
+i {
+  color: #333;
+}
+#gmail:hover {
+  color: #D44638;
+}
+#cell:hover {
+  color: #25D366;
+}
+#gith:hover {
+  color: #6e5494;
+}
+#linked:hover {
+  color: #0077b5;
+}
 
 /* Bigger Screens */
 @media (min-width: 1000px) {
