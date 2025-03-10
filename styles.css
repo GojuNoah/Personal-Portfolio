@@ -69,22 +69,50 @@ body {
 /* project tile section */
 #projects {
   width: 100%;
-  background-color: #F6FCDF;
+  background-color: #003459;
   height: 100%;
+  padding: 10px;
 }
 #project-transition {
   font-family: Tinos;
   text-align: center;
   padding: 20px;
-  grid-column: 1 / 4;
+  color: #00A8E8;
+}
+#tiles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .project-tile {
-  width: 1fr repeat;
-  background-color: #859F3D;
-  border-radius: 3%;
+  background-color: #00A8E8;
+  border-radius: 5%;
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 250px;
+  margin: 10px;
+}
+.project-img {
+  height: 80%;
+  width: 90%;
+  margin: 12px;
+  border-radius: 2%;
+}
+.project-title {
+  background-color: #00171F;
+  width: 100%;
+  text-align: center;
+  height: 25px;
+  margin-top: auto;
+}
+.project-link {
+  text-decoration: none;
+  color: #007EA7;
 }
 #see-all {
-  grid-column: 1 / 4;
   display: flex;
   justify-content: center;
 }
@@ -108,6 +136,7 @@ body {
   justify-content: space-evenly;
   font-size: 35px;
   padding: 5px;
+  background-color: #007EA7;
 }
 i {
   color: #333;
