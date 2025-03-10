@@ -69,22 +69,23 @@ body {
 /* project tile section */
 #projects {
   width: 100%;
-  background-color: #F6FCDF;
+  background-color: #003459;
   height: 100%;
 }
 #project-transition {
   font-family: Tinos;
   text-align: center;
   padding: 20px;
-  grid-column: 1 / 4;
+  color: #00A8E8;
 }
 .project-tile {
-  width: 1fr repeat;
-  background-color: #859F3D;
+  background-color: #00A8E8;
   border-radius: 3%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
 }
 #see-all {
-  grid-column: 1 / 4;
   display: flex;
   justify-content: center;
 }
