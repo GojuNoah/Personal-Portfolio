@@ -30,3 +30,6 @@ Portfolio: https://tubular-fenglisu-802de2.netlify.app/
 Email: gojunoah@gmail.com
 GitHub: GojuNoah
 LinkedIn: https://www.linkedin.com/in/noah-stone-5b3689190/
+
+## Notes
+This is a current work in progress.
