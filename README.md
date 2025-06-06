@@ -1,4 +1,4 @@
-# Noah Stone | Personal Portfolio | [Live Demo](#https://noah-stone.netlify.app/)
+# Noah Stone | Personal Portfolio | [Live Demo](#noah-stone.netlify.app/)
 
 Welcome to my personal portfolio website! This project showcases my journey from factory life to software engineering, with a current focus on Frontend Web Development.
 
