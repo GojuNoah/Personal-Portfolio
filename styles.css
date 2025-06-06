@@ -1,55 +1,101 @@
-   * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-      background: #f9f9f9;
-      color: #111;
-      padding: 2rem;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-    header h1 {
-      font-size: 2.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-    }
-    nav {
-      margin-top: 1rem;
-    }
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #0077cc;
-    }
-    section {
-      margin-bottom: 4rem;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-    .project {
-      margin-bottom: 2rem;
-    }
-    .project a {
-      display: inline-block;
-      margin-right: 1rem;
-      color: #0077cc;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem 0;
-      border-top: 1px solid #ccc;
-      margin-top: 4rem;
-    }
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #111;
+  --link-color: #0077cc;
+  --border-color: #ccc;
+}
+    
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #fff;
+  --link-color: #66b3ff;
+  --border-color: #444;
+}
+    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+section {
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.project {
+  margin-bottom: 2rem;
+}
+
+.project a {
+  display: inline-block;
+  margin-right: 1rem;
+  color: var(--link-color);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border-color);
+  margin-top: 4rem;
+}
+
+.theme-switch-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+    
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+    
+#theme-toggle:hover {
+  transform: scale(1.1);
+}
