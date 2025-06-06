@@ -24,7 +24,7 @@ Hi, I’m Noah—a self-taught developer passionate about building interactive a
 
 - **Email:** gojunoah@gmail.com
 - [GitHub](#GitHub.com/GojuNoah)
-- [LinkedIn](#https://www.linkedin.com/in/noah-stone-5b3689190/)
+- [LinkedIn](#linkedin.com/in/noah-stone-5b3689190/)
 - [Resume](#)
 
 ---
