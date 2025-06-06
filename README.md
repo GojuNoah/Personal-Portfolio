@@ -29,4 +29,4 @@ Hi, I’m Noah—a self-taught developer passionate about building interactive a
 
 ---
 
-_Built with ❤️ by Noah Stone. Dark/Light Mode Coming Soon!_
+_Built with ❤️ by Noah Stone.
