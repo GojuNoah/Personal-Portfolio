@@ -29,4 +29,4 @@ Hi, I’m Noah—a self-taught developer passionate about building interactive a
 
 ---
 
-_Built with ❤️ by Noah Stone.
+_Built with ❤️ by Noah Stone._
