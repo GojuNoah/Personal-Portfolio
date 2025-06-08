@@ -1,4 +1,4 @@
-# Noah Stone | Personal Portfolio | [Live Demo](#noah-stone.netlify.app/)
+# Noah Stone | Personal Portfolio | [Live Demo](#)
 
 Welcome to my personal portfolio website! This project showcases my journey from factory life to software engineering, with a current focus on Frontend Web Development.
 
@@ -10,8 +10,9 @@ Hi, I’m Noah—a self-taught developer passionate about building interactive a
 
 - ✅ HTML
 - ✅ CSS
+- ✅ JavaScript
 - ✅ Responsive Design
-- ⚙️ Currently Learning: JavaScript
+- ⚙️ Currently Learning: 
 
 ## 💼 Projects
 
@@ -23,7 +24,6 @@ Hi, I’m Noah—a self-taught developer passionate about building interactive a
 ## 📫 Contact
 
 - **Email:** gojunoah@gmail.com
-- [GitHub](#GitHub.com/GojuNoah)
 - [LinkedIn](#linkedin.com/in/noah-stone-5b3689190/)
 - [Resume](#)
 
