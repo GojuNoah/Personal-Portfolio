@@ -6,10 +6,16 @@
 }
     
 [data-theme="dark"] {
-  --bg-color: #1a1a1a;
+  --bg-color: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
   --text-color: #fff;
   --link-color: #66b3ff;
   --border-color: #444;
+}
+
+/* Show stars and shooting stars only in dark mode */
+[data-theme="dark"] .stars,
+[data-theme="dark"] .shooting-star {
+  display: block;
 }
     
 * {
@@ -21,8 +27,7 @@
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
-  background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
-  overflow: hidden;
+  background: var(--bg-color);
   color: var(--text-color);
   padding: 2rem;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -53,6 +58,7 @@ header {
     80vw 92vh 1px white, 85vw 82vh 2px white, 90vw 88vh 1px white,
     95vw 75vh 2px white;
   animation: twinkle 8s infinite linear;
+  display: none; /* Hide the stars by default */
 }
 
 .shooting-star {
@@ -61,6 +67,7 @@ header {
   height: 2px;
   background: linear-gradient(90deg, white, transparent);
   animation: shoot 3s infinite ease-in;
+  display: none; /* Hide the stars by default */
 }
 
 .shooting-star:nth-child(1) {
@@ -118,6 +125,7 @@ header {
     51vw 92vh 2px white, 59vw 78vh 1px white;
   animation: twinkle 6s infinite linear reverse;
 }
+
 header h1 {
   font-size: 2.5rem;
 }
