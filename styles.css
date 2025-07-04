@@ -1,8 +1,8 @@
 :root {
-  --bg-color: #f9f9f9;
-  --text-color: #111;
-  --link-color: #0077cc;
-  --border-color: #ccc;
+  --bg-color: #a5a7c2;
+  --text-color: #040404;
+  --link-color: #4c4c6c;
+  --border-color: #a5a7c2;
 }
     
 [data-theme="dark"] {
@@ -164,6 +164,10 @@ h2 {
 .project a {
   display: inline-block;
   margin-right: 1rem;
+  color: var(--link-color);
+}
+
+#contact a {
   color: var(--link-color);
 }
 
