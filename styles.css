@@ -8,8 +8,8 @@
 [data-theme="dark"] {
   --bg-color: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
   --text-color: #fff;
-  --link-color: #66b3ff;
-  --border-color: #444;
+  --link-color: #38b0dc;
+  --border-color: #54545c;
 }
 
 /* Show stars and shooting stars only in dark mode */
