@@ -74,6 +74,19 @@
 
   <footer>
     <button id="form-btn">Send me an email</button>
+    <form id="contact-form" style="display:none;">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      
+      <button type="submit">Send</button>
+      <button type="button" id="close-btn">Close</button>
+    </form>
     <p>Built with ❤️ by Noah</p>
   </footer>
   <script src="script.js"></script>
