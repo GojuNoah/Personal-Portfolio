@@ -4,6 +4,14 @@
   --link-color: #4c4c6c;
   --border-color: #a5a7c2;
 }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
     
 [data-theme="dark"] {
   --bg-color: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
@@ -16,12 +24,6 @@
 [data-theme="dark"] .stars,
 [data-theme="dark"] .shooting-star {
   display: block;
-}
-    
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 body {
