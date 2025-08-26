@@ -20,10 +20,38 @@
   --border-color: #54545c;
 }
 
-/* Show stars and shooting stars only in dark mode */
-[data-theme="dark"] .stars,
-[data-theme="dark"] .shooting-star {
-  display: block;
+.theme-switch-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+    
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+    
+#theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
 }
 
 body {
@@ -33,11 +61,13 @@ body {
   color: var(--text-color);
   padding: 2rem;
   transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 1;
 }
 
-header {
-  text-align: center;
-  margin-bottom: 3rem;
+/* Show stars and shooting stars only in dark mode */
+[data-theme="dark"] .stars,
+[data-theme="dark"] .shooting-star {
+  display: block;
 }
 
 /* shooting stars background animation */
@@ -128,15 +158,6 @@ header {
   animation: twinkle 6s infinite linear reverse;
 }
 
-header h1 {
-  font-size: 2.5rem;
-}
-
-header p {
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
-}
-
 nav {
   margin-top: 1rem;
 }
@@ -169,6 +190,17 @@ h2 {
   color: var(--link-color);
 }
 
+#contact a {
+  color: var(--link-color);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border-color);
+  margin-top: 4rem;
+}
+
 #form-btn {
   background-color: var(--link-color);
   color: lightblue;
@@ -188,33 +220,17 @@ h2 {
   border: 1px solid var(--link-color);
 }
 
-#contact a {
-  color: var(--link-color);
+#form-container {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-
-footer {
-  text-align: center;
-  padding: 2rem 0;
-  border-top: 1px solid var(--border-color);
-  margin-top: 4rem;
-}
-
-.theme-switch-wrapper {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-    
-#theme-toggle {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  padding: 0.5rem;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-}
-    
-#theme-toggle:hover {
-  transform: scale(1.1);
-}
+/* End of styles.css */
