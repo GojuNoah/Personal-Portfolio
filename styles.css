@@ -214,12 +214,12 @@ footer {
   margin: 1rem 0;
 }
 
+/* Form styling */
 #form-btn:hover {
   background-color: var(--text-color);
   color: cyan;
   border: 1px solid var(--link-color);
 }
-
 #form-container {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -232,5 +232,63 @@ footer {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+#contact-form {
+  background-color: beige;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  width: 50%;
+  border-radius: 10px;
+  text-align: left
+}
+#contact-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+#contact-form input, #contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+#contact-form input:focus, #contact-form textarea:focus {
+  border-color: var(--link-color);
+  outline: none;
+}
+#contact-form textarea {
+  height: 150px;
+  resize: vertical;
+}
+#close-btn {
+  color: var(--text-color);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#close-btn:hover,
+#close-btn:focus {
+  color: var(--link-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+#submit-btn {
+  background-color: var(--link-color);
+  color: lightblue;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+#submit-btn:hover {
+  background-color: var(--text-color);
+  color: cyan;
+  border: 1px solid var(--link-color);
 }
 /* End of styles.css */
