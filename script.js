@@ -1,6 +1,10 @@
 
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
+const formBtn = document.getElementById('form-btn');
+const formContainer = document.getElementById('form-container');
+const contactForm = document.getElementById('contact-form');
+const closeBtn = document.getElementById('close-btn');
 
 // Check for saved theme preference
 const currentTheme = localStorage.getItem('theme');
@@ -18,3 +22,15 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', newTheme);
     themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
 });
+
+// Show contact form
+formBtn.addEventListener('click', () => {
+    formContainer.style.display = 'flex';
+});
+
+// Close contact form
+closeBtn.addEventListener('click', () => {
+    formContainer.style.display = 'none';
+});
+
+

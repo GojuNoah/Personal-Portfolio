@@ -20,10 +20,38 @@
   --border-color: #54545c;
 }
 
-/* Show stars and shooting stars only in dark mode */
-[data-theme="dark"] .stars,
-[data-theme="dark"] .shooting-star {
-  display: block;
+.theme-switch-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+    
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+    
+#theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
 }
 
 body {
@@ -33,11 +61,13 @@ body {
   color: var(--text-color);
   padding: 2rem;
   transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 1;
 }
 
-header {
-  text-align: center;
-  margin-bottom: 3rem;
+/* Show stars and shooting stars only in dark mode */
+[data-theme="dark"] .stars,
+[data-theme="dark"] .shooting-star {
+  display: block;
 }
 
 /* shooting stars background animation */
@@ -51,14 +81,14 @@ header {
     38vw 18vh 2px white, 42vw 35vh 1px white, 48vw 25vh 2px white,
     53vw 42vh 1px white, 58vw 15vh 2px white, 63vw 38vh 1px white,
     68vw 28vh 2px white, 73vw 45vh 1px white, 78vw 32vh 2px white,
-    83vw 48vh 1px white, 88vw 20vh 2px white, 93vw 52vh 1px white,
-    98vw 35vh 2px white, 5vw 60vh 1px white, 12vw 65vh 2px white,
+    83vw 48vh 1px white, 88vw 20vh 2px white, 92vw 52vh 1px white,
+    97vw 35vh 2px white, 5vw 60vh 1px white, 12vw 65vh 2px white,
     18vw 72vh 1px white, 25vw 78vh 2px white, 30vw 85vh 1px white,
     35vw 68vh 2px white, 40vw 82vh 1px white, 45vw 92vh 2px white,
     50vw 75vh 1px white, 55vw 88vh 2px white, 60vw 95vh 1px white,
     65vw 72vh 2px white, 70vw 85vh 1px white, 75vw 78vh 2px white,
     80vw 92vh 1px white, 85vw 82vh 2px white, 90vw 88vh 1px white,
-    95vw 75vh 2px white;
+    94vw 75vh 2px white;
   animation: twinkle 8s infinite linear;
   display: none; /* Hide the stars by default */
 }
@@ -121,20 +151,11 @@ header {
   box-shadow: 8vw 12vh 2px white, 16vw 18vh 1px white, 24vw 25vh 2px white,
     33vw 15vh 1px white, 41vw 28vh 2px white, 49vw 35vh 1px white,
     57vw 22vh 2px white, 65vw 42vh 1px white, 73vw 28vh 2px white,
-    81vw 48vh 1px white, 89vw 32vh 2px white, 97vw 45vh 1px white,
+    81vw 48vh 1px white, 89vw 32vh 2px white, 96vw 45vh 1px white,
     3vw 68vh 2px white, 11vw 75vh 1px white, 19vw 82vh 2px white,
     27vw 88vh 1px white, 35vw 72vh 2px white, 43vw 85vh 1px white,
     51vw 92vh 2px white, 59vw 78vh 1px white;
   animation: twinkle 6s infinite linear reverse;
-}
-
-header h1 {
-  font-size: 2.5rem;
-}
-
-header p {
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
 }
 
 nav {
@@ -180,22 +201,94 @@ footer {
   margin-top: 4rem;
 }
 
-.theme-switch-wrapper {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-    
-#theme-toggle {
-  background: none;
+#form-btn {
+  background-color: var(--link-color);
+  color: lightblue;
   border: none;
-  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
-  padding: 0.5rem;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 25%;
+  text-align: center;
+  margin: 1rem 0;
 }
-    
-#theme-toggle:hover {
-  transform: scale(1.1);
+
+/* Form styling */
+#form-btn:hover {
+  background-color: var(--text-color);
+  color: cyan;
+  border: 1px solid var(--link-color);
 }
+#form-container {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+#contact-form {
+  background-color: beige;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  width: 50%;
+  border-radius: 10px;
+  text-align: left
+}
+#contact-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+#contact-form input, #contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+#contact-form input:focus, #contact-form textarea:focus {
+  border-color: var(--link-color);
+  outline: none;
+}
+#contact-form textarea {
+  height: 150px;
+  resize: vertical;
+}
+#close-btn {
+  color: var(--text-color);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#close-btn:hover,
+#close-btn:focus {
+  color: var(--link-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+#submit-btn {
+  background-color: var(--link-color);
+  color: lightblue;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+#submit-btn:hover {
+  background-color: var(--text-color);
+  color: cyan;
+  border: 1px solid var(--link-color);
+}
+/* End of styles.css */
