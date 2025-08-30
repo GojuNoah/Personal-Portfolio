@@ -209,7 +209,7 @@ footer {
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-  width: 25%;
+  width: 30%;
   text-align: center;
   margin: 1rem 0;
 }
@@ -238,14 +238,14 @@ footer {
   margin: auto;
   padding: 20px;
   border: 1px solid var(--border-color);
-  width: 50%;
+  width: 60%;
   border-radius: 10px;
   text-align: left
 }
 #contact-form label {
   display: block;
   margin-bottom: 10px;
-  color: var(--text-color);
+  color: black;
 }
 #contact-form input, #contact-form textarea {
   width: 100%;
@@ -265,7 +265,6 @@ footer {
   resize: vertical;
 }
 #close-btn {
-  color: var(--text-color);
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -279,7 +278,7 @@ footer {
 }
 #submit-btn {
   background-color: var(--link-color);
-  color: lightblue;
+  color: black;
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
