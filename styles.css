@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root {
   --bg-color: #a5a7c2;
   --text-color: #040404;
@@ -10,10 +17,12 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* Dark mode styles */
+
 [data-theme="dark"] {
   --bg-color: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
   --text-color: #fff;
@@ -21,47 +30,89 @@
   --border-color: #54545c;
 }
 
-/* theme switcher styles */
+/* Theme switcher styles */
 .theme-switch-wrapper {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 }
 #theme-toggle {
   background: none;
   border: none;
-  font-size: 1.5rem;
   cursor: pointer;
-  padding: 0.5rem;
   border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
-}    
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  font-size: 1.5rem;
+}
 #theme-toggle:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
-/* Header styles */
+/* header and navigation styles */
 header {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 3rem;
+  padding: 1rem;
+  width: 100%;
+  border-bottom: #0b0b2b 2px solid;
 }
-header h1 {
-  font-size: 2.5rem;
+#header-title {
+  font-size: 1.5rem;
+  margin-right: auto;
+  color: var(--text-color);
 }
-header p {
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
+nav {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+nav a {
+  text-decoration: none;
+  color: var(--link-color);
+  margin: 0.5rem;
 }
 
-/* Body styles */
+/* Main content styles */
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
   background: var(--bg-color);
   color: var(--text-color);
-  padding: 2rem;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  -o-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
   z-index: 1;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+section {
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.project {
+  margin-bottom: 2rem;
+}
+.project a {
+  display: inline-block;
+  margin-right: 1rem;
+  color: var(--link-color);
+}
+#contact a {
+  color: var(--link-color);
 }
 
 /* Show stars and shooting stars only in dark mode */
@@ -75,7 +126,7 @@ body {
   height: 1px;
   position: absolute;
   background: white;
-  box-shadow: 2vw 5vh 2px white, 10vw 8vh 2px white, 15vw 15vh 1px white,
+  -webkit-box-shadow: 2vw 5vh 2px white, 10vw 8vh 2px white, 15vw 15vh 1px white,
     22vw 22vh 1px white, 28vw 12vh 2px white, 32vw 32vh 1px white,
     38vw 18vh 2px white, 42vw 35vh 1px white, 48vw 25vh 2px white,
     53vw 42vh 1px white, 58vw 15vh 2px white, 63vw 38vh 1px white,
@@ -88,32 +139,63 @@ body {
     65vw 72vh 2px white, 70vw 85vh 1px white, 75vw 78vh 2px white,
     80vw 92vh 1px white, 85vw 82vh 2px white, 90vw 88vh 1px white,
     94vw 75vh 2px white;
-  animation: twinkle 8s infinite linear;
+          box-shadow: 2vw 5vh 2px white, 10vw 8vh 2px white, 15vw 15vh 1px white,
+    22vw 22vh 1px white, 28vw 12vh 2px white, 32vw 32vh 1px white,
+    38vw 18vh 2px white, 42vw 35vh 1px white, 48vw 25vh 2px white,
+    53vw 42vh 1px white, 58vw 15vh 2px white, 63vw 38vh 1px white,
+    68vw 28vh 2px white, 73vw 45vh 1px white, 78vw 32vh 2px white,
+    83vw 48vh 1px white, 88vw 20vh 2px white, 92vw 52vh 1px white,
+    97vw 35vh 2px white, 5vw 60vh 1px white, 12vw 65vh 2px white,
+    18vw 72vh 1px white, 25vw 78vh 2px white, 30vw 85vh 1px white,
+    35vw 68vh 2px white, 40vw 82vh 1px white, 45vw 92vh 2px white,
+    50vw 75vh 1px white, 55vw 88vh 2px white, 60vw 95vh 1px white,
+    65vw 72vh 2px white, 70vw 85vh 1px white, 75vw 78vh 2px white,
+    80vw 92vh 1px white, 85vw 82vh 2px white, 90vw 88vh 1px white,
+    94vw 75vh 2px white;
+  -webkit-animation: twinkle 8s infinite linear;
+          animation: twinkle 8s infinite linear;
   display: none; /* Hide the stars by default */
 }
 .shooting-star {
   position: absolute;
   width: 100px;
   height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(white), to(transparent));
+  background: -o-linear-gradient(left, white, transparent);
   background: linear-gradient(90deg, white, transparent);
-  animation: shoot 3s infinite ease-in;
+  -webkit-animation: shoot 3s infinite ease-in;
+          animation: shoot 3s infinite ease-in;
   display: none; /* Hide the stars by default */
 }
 .shooting-star:nth-child(1) {
   top: 20%;
   left: -100px;
-  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 .shooting-star:nth-child(2) {
   top: 35%;
   left: -100px;
-  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 .shooting-star:nth-child(3) {
   top: 50%;
   left: -100px;
-  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
+
+@-webkit-keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
 /* Keyframes for twinkling and shooting stars */
 @keyframes twinkle {
   0%,
@@ -124,13 +206,29 @@ body {
     opacity: 0.4;
   }
 }
-@keyframes shoot {
+
+@-webkit-keyframes shoot {
   0% {
-    transform: translateX(0) translateY(0) rotate(25deg);
+    -webkit-transform: translateX(0) translateY(0) rotate(25deg);
+            transform: translateX(0) translateY(0) rotate(25deg);
     opacity: 1;
   }
   100% {
-    transform: translateX(120vw) translateY(50vh) rotate(25deg);
+    -webkit-transform: translateX(120vw) translateY(50vh) rotate(25deg);
+            transform: translateX(120vw) translateY(50vh) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+@keyframes shoot {
+  0% {
+    -webkit-transform: translateX(0) translateY(0) rotate(25deg);
+            transform: translateX(0) translateY(0) rotate(25deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(120vw) translateY(50vh) rotate(25deg);
+            transform: translateX(120vw) translateY(50vh) rotate(25deg);
     opacity: 0;
   }
 }
@@ -141,7 +239,14 @@ body {
   width: 1px;
   height: 1px;
   background: white;
-  box-shadow: 8vw 12vh 2px white, 16vw 18vh 1px white, 24vw 25vh 2px white,
+  -webkit-box-shadow: 8vw 12vh 2px white, 16vw 18vh 1px white, 24vw 25vh 2px white,
+    33vw 15vh 1px white, 41vw 28vh 2px white, 49vw 35vh 1px white,
+    57vw 22vh 2px white, 65vw 42vh 1px white, 73vw 28vh 2px white,
+    81vw 48vh 1px white, 89vw 32vh 2px white, 96vw 45vh 1px white,
+    3vw 68vh 2px white, 11vw 75vh 1px white, 19vw 82vh 2px white,
+    27vw 88vh 1px white, 35vw 72vh 2px white, 43vw 85vh 1px white,
+    51vw 92vh 2px white, 59vw 78vh 1px white;
+          box-shadow: 8vw 12vh 2px white, 16vw 18vh 1px white, 24vw 25vh 2px white,
     33vw 15vh 1px white, 41vw 28vh 2px white, 49vw 35vh 1px white,
     57vw 22vh 2px white, 65vw 42vh 1px white, 73vw 28vh 2px white,
     81vw 48vh 1px white, 89vw 32vh 2px white, 96vw 45vh 1px white,
@@ -149,39 +254,6 @@ body {
     27vw 88vh 1px white, 35vw 72vh 2px white, 43vw 85vh 1px white,
     51vw 92vh 2px white, 59vw 78vh 1px white;
   animation: twinkle 6s infinite linear reverse;
-}
-
-/* Navigation styles */
-nav {
-  margin-top: 1rem;
-}
-nav a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: var(--link-color);
-}
-
-/* section styles */
-h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-section {
-  margin-bottom: 4rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.project {
-  margin-bottom: 2rem;
-}
-.project a {
-  display: inline-block;
-  margin-right: 1rem;
-  color: var(--link-color);
-}
-#contact a {
-  color: var(--link-color);
 }
 
 /* Footer styles */
@@ -200,6 +272,8 @@ footer {
   padding: 0.5rem 1rem;
   cursor: pointer;
   border-radius: 5px;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
   width: 30%;
   text-align: center;
@@ -274,6 +348,8 @@ footer {
   padding: 0.5rem 1rem;
   cursor: pointer;
   border-radius: 5px;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 #submit-btn:hover {
