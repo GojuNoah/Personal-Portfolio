@@ -75,9 +75,10 @@
   <footer>
     <button id="form-btn">Send me an email</button>
     <div id="form-container" role="dialog" aria-modal="true" aria-labelledby="contact-title" style="display:none;">
-      <form id="contact-form" novalidate>
+      <form id="contact-form" novalidate action="https://api.postcatch.io/submit/53b6ae5d-e73d-4572-aef2-ad1d2e4ac345" method="POST">
         <h3 id="contact-title" class="sr-only">Contact form</h3>
-
+        <input type="hidden" name="_next" value="/thank-you" />
+        
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required placeholder="Enter your name" />
 

@@ -53,6 +53,22 @@ contactForm.addEventListener('submit', (e) => {
     formContainer.style.display = 'none';
 });
 
+// Form submission 
+async function onSubmit(ev) {
+  ev.preventDefault();
+  await fetch('https://api.postcatch.io/submit/53b6ae5d-e73d-4572-aef2-ad1d2e4ac345', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      name: ev.target.name.value,
+      email: ev.target.email.value,
+      message: ev.target.message.value
+    })
+  });
+}
+
 // Close contact form
 closeBtn.addEventListener('click', () => {
     formContainer.style.display = 'none';
