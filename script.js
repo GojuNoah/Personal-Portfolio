@@ -28,6 +28,31 @@ formBtn.addEventListener('click', () => {
     formContainer.style.display = 'flex';
 });
 
+// Contact form validation
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const name = contactForm.name.value.trim();
+    const email = contactForm.email.value.trim();
+    const message = contactForm.message.value.trim();
+    
+    if (!name || !email || !message) {
+        alert('Please fill in all fields.');
+        return;
+    }
+    
+    // Simple email validation
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!email.match(emailPattern)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
+    
+    alert('Thank you for your message!');
+    contactForm.reset();
+    formContainer.style.display = 'none';
+});
+
 // Close contact form
 closeBtn.addEventListener('click', () => {
     formContainer.style.display = 'none';

@@ -74,23 +74,27 @@
 
   <footer>
     <button id="form-btn">Send me an email</button>
-    <container id="form-container">
-      <form id="contact-form">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required placeholder="Enter your name" />
-      
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required placeholder="Enter your email" />
-      
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required placeholder="Feedback on website, why you're contacting me...etc"></textarea>
-      
-      <button type="submit" id="submit-btn">Send</button>
-      <button type="button" id="close-btn">Close</button>
+    <div id="form-container" role="dialog" aria-modal="true" aria-labelledby="contact-title" style="display:none;">
+      <form id="contact-form" novalidate>
+        <h3 id="contact-title" class="sr-only">Contact form</h3>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name" />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email" />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required placeholder="Feedback on website, why you're contacting me...etc"></textarea>
+
+        <button type="submit" id="submit-btn">Send</button>
+        <button type="button" id="close-btn">Close</button>
+        <p id="form-status" role="status" aria-live="polite"></p>
     </form>
-    </container>
-    <p>Built with ❤️ by Noah</p>
-  </footer>
+  </div>
+  <p>Built with ❤️ by Noah</p>
+</footer>
+
   <script src="script.js"></script>
 </body>
 </html>
