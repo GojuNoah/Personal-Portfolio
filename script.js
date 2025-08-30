@@ -5,6 +5,9 @@ const formBtn = document.getElementById('form-btn');
 const formContainer = document.getElementById('form-container');
 const contactForm = document.getElementById('contact-form');
 const closeBtn = document.getElementById('close-btn');
+const name = document.getElementById('name');
+const email = document.getElementById('email');
+const message = document.getElementById('message');
 
 // Check for saved theme preference
 const currentTheme = localStorage.getItem('theme');
@@ -28,34 +31,51 @@ formBtn.addEventListener('click', () => {
     formContainer.style.display = 'flex';
 });
 
-// Contact form validation
-contactForm.addEventListener('submit', (e) => {
+// hide contact form
+closeBtn.addEventListener('click', () => {
+    formContainer.style.display = 'none';
+});
+
+async function onSubmit(e) {
     e.preventDefault();
     
     const name = contactForm.name.value.trim();
     const email = contactForm.email.value.trim();
     const message = contactForm.message.value.trim();
     
+    // Validation
     if (!name || !email || !message) {
         alert('Please fill in all fields.');
         return;
     }
     
-    // Simple email validation
     const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
     if (!email.match(emailPattern)) {
         alert('Please enter a valid email address.');
         return;
     }
     
-    alert('Thank you for your message!');
-    contactForm.reset();
-    formContainer.style.display = 'none';
-});
+    // Submission (only if validation passed)
+    try {
+        const res = await fetch('https://api.postcatch.io/submit/53b6ae5d-e73d-4572-aef2-ad1d2e4ac345', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, email, message })
+        });
+        
+        if (res.ok) {
+            alert('Thank you for your message!');
+            contactForm.reset();
+            formContainer.style.display = 'none';
+        } else {
+            alert('Something went wrong. Please try again later.');
+        }
+    } catch (err) {
+        alert('Error sending message: ' + err.message);
+    }
+}
 
-// Close contact form
-closeBtn.addEventListener('click', () => {
-    formContainer.style.display = 'none';
-});
-
-
+// Hook up the handler
+contactForm.addEventListener('submit', onSubmit);
