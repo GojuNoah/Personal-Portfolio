@@ -12,7 +12,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-    
+
+/* Dark mode styles */
 [data-theme="dark"] {
   --bg-color: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
   --text-color: #fff;
@@ -20,12 +21,12 @@
   --border-color: #54545c;
 }
 
+/* theme switcher styles */
 .theme-switch-wrapper {
   position: absolute;
   top: 20px;
   right: 20px;
 }
-    
 #theme-toggle {
   background: none;
   border: none;
@@ -34,26 +35,25 @@
   padding: 0.5rem;
   border-radius: 50%;
   transition: transform 0.3s ease;
-}
-    
+}    
 #theme-toggle:hover {
   transform: scale(1.1);
 }
 
+/* Header styles */
 header {
   text-align: center;
   margin-bottom: 3rem;
 }
-
 header h1 {
   font-size: 2.5rem;
 }
-
 header p {
   font-size: 1.2rem;
   margin-top: 0.5rem;
 }
 
+/* Body styles */
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
@@ -69,7 +69,6 @@ body {
 [data-theme="dark"] .shooting-star {
   display: block;
 }
-
 /* shooting stars background animation */
 .stars {
   width: 1px;
@@ -92,7 +91,6 @@ body {
   animation: twinkle 8s infinite linear;
   display: none; /* Hide the stars by default */
 }
-
 .shooting-star {
   position: absolute;
   width: 100px;
@@ -101,25 +99,22 @@ body {
   animation: shoot 3s infinite ease-in;
   display: none; /* Hide the stars by default */
 }
-
 .shooting-star:nth-child(1) {
   top: 20%;
   left: -100px;
   animation-delay: 0s;
 }
-
 .shooting-star:nth-child(2) {
   top: 35%;
   left: -100px;
   animation-delay: 1s;
 }
-
 .shooting-star:nth-child(3) {
   top: 50%;
   left: -100px;
   animation-delay: 2s;
 }
-
+/* Keyframes for twinkling and shooting stars */
 @keyframes twinkle {
   0%,
   100% {
@@ -129,7 +124,6 @@ body {
     opacity: 0.4;
   }
 }
-
 @keyframes shoot {
   0% {
     transform: translateX(0) translateY(0) rotate(25deg);
@@ -140,7 +134,6 @@ body {
     opacity: 0;
   }
 }
-
 /* Additional twinkling stars with different animation timing */
 .stars::after {
   content: "";
@@ -158,42 +151,40 @@ body {
   animation: twinkle 6s infinite linear reverse;
 }
 
+/* Navigation styles */
 nav {
   margin-top: 1rem;
 }
-
 nav a {
   margin: 0 1rem;
   text-decoration: none;
   color: var(--link-color);
 }
 
+/* section styles */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
 section {
   margin-bottom: 4rem;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
-
-h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
 .project {
   margin-bottom: 2rem;
 }
-
 .project a {
   display: inline-block;
   margin-right: 1rem;
   color: var(--link-color);
 }
-
 #contact a {
   color: var(--link-color);
 }
 
+/* Footer styles */
 footer {
   text-align: center;
   padding: 2rem 0;
@@ -201,6 +192,7 @@ footer {
   margin-top: 4rem;
 }
 
+/* Contact form button styles */
 #form-btn {
   background-color: var(--link-color);
   color: lightblue;
@@ -213,7 +205,6 @@ footer {
   text-align: center;
   margin: 1rem 0;
 }
-
 /* Form styling */
 #form-btn:hover {
   background-color: var(--text-color);
