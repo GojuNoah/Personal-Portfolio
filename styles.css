@@ -20,12 +20,37 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-    
+
 [data-theme="dark"] {
   --bg-color: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
   --text-color: #fff;
   --link-color: #38b0dc;
   --border-color: #54545c;
+}
+
+/* Theme switcher styles */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  font-size: 1.5rem;
+}
+#theme-toggle:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 /* header and navigation styles */
@@ -52,6 +77,7 @@ nav a {
   margin: 0.5rem;
 }
 
+/* Main content styles */
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
@@ -64,31 +90,28 @@ body {
   max-width: 100%;
   overflow-x: hidden;
 }
+section {
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.project {
+  margin-bottom: 2rem;
+}
+.project a {
+  display: inline-block;
+  margin-right: 1rem;
+  color: var(--link-color);
+}
+#contact a {
+  color: var(--link-color);
+}
 
-.theme-switch-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-}
-#theme-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  border-radius: 50%;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  -o-transition: transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-  font-size: 1.5rem;
-}
-  
-#theme-toggle:hover {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
-}
 /* Show stars and shooting stars only in dark mode */
 [data-theme="dark"] .stars,
 [data-theme="dark"] .shooting-star {
@@ -232,32 +255,6 @@ body {
     27vw 88vh 1px white, 35vw 72vh 2px white, 43vw 85vh 1px white,
     51vw 92vh 2px white, 59vw 78vh 1px white;
   animation: twinkle 6s infinite linear reverse;
-}
-
-section {
-  margin-bottom: 4rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.project {
-  margin-bottom: 2rem;
-}
-
-.project a {
-  display: inline-block;
-  margin-right: 1rem;
-  color: var(--link-color);
-}
-
-#contact a {
-  color: var(--link-color);
 }
 
 footer {
