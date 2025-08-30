@@ -57,7 +57,7 @@ async function onSubmit(e) {
     
     // Submission (only if validation passed)
     try {
-        const res = await fetch('https://api.postcatch.io/submit/53b6ae5d-e73d-4572-aef2-ad1d2e4ac345', {
+        const res = await fetch('https://api.postcatch.io/submit/9fad523e-6dca-4623-8e73-7805446f134c', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
