@@ -28,21 +28,28 @@
   --border-color: #54545c;
 }
 
+/* header and navigation styles */
 header {
-  text-align: center;
-  margin-bottom: 3rem;
-  height: 150px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  width: 100%;
+  border-bottom: #0b0b2b 2px solid;
 }
-
-header h1 {
-  font-size: 2.5rem;
+#header-title {
+  font-size: 1.5rem;
+  margin-right: auto;
+  color: var(--text-color);
 }
-
-header p {
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
+nav {
+  display: flex;
+  align-items: center;
+}
+nav a {
+  text-decoration: none;
+  color: var(--link-color);
+  margin: 0.5rem;
 }
 
 body {
@@ -50,34 +57,33 @@ body {
   line-height: 1.6;
   background: var(--bg-color);
   color: var(--text-color);
-  padding: 2rem;
   -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   -o-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
   z-index: 1;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .theme-switch-wrapper {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 }
-    
 #theme-toggle {
   background: none;
   border: none;
-  font-size: 1.5rem;
   cursor: pointer;
-  padding: 0.5rem;
   border-radius: 50%;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  font-size: 1.5rem;
 }
-    
+  
 #theme-toggle:hover {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
@@ -88,17 +94,6 @@ body {
 [data-theme="dark"] .shooting-star {
   display: block;
 }
-
-nav {
-  margin: 1rem;
-}
-
-nav a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: var(--link-color);
-}
-
 /* shooting stars background animation */
 .stars {
   width: 1px;
