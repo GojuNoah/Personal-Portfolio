@@ -5,13 +5,6 @@
 * Browsers: last 4 version
 */
 
-:root {
-  --bg-color: #a5a7c2;
-  --text-color: #040404;
-  --link-color: #4c4c6c;
-  --border-color: #a5a7c2;
-}
-
 *,
 *::before,
 *::after {
@@ -21,7 +14,6 @@
           box-sizing: border-box;
 }
 
-/* Dark mode styles */
 [data-theme="dark"] {
   --bg-color: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
   --text-color: #fff;
@@ -155,6 +147,7 @@ h2 {
           animation: twinkle 8s infinite linear;
   display: none; /* Hide the stars by default */
 }
+
 .shooting-star {
   position: absolute;
   width: 100px;
@@ -166,18 +159,21 @@ h2 {
           animation: shoot 3s infinite ease-in;
   display: none; /* Hide the stars by default */
 }
+
 .shooting-star:nth-child(1) {
   top: 20%;
   left: -100px;
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
 }
+
 .shooting-star:nth-child(2) {
   top: 35%;
   left: -100px;
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
+
 .shooting-star:nth-child(3) {
   top: 50%;
   left: -100px;
@@ -195,7 +191,6 @@ h2 {
   }
 }
 
-/* Keyframes for twinkling and shooting stars */
 @keyframes twinkle {
   0%,
   100% {
@@ -231,6 +226,7 @@ h2 {
     opacity: 0;
   }
 }
+
 /* Additional twinkling stars with different animation timing */
 .stars::after {
   content: "";
@@ -255,7 +251,6 @@ h2 {
   animation: twinkle 6s infinite linear reverse;
 }
 
-/* Footer styles */
 footer {
   text-align: center;
   padding: 2rem 0;
@@ -263,7 +258,6 @@ footer {
   margin-top: 4rem;
 }
 
-/* Contact form button styles */
 #form-btn {
   background-color: var(--link-color);
   color: lightblue;
@@ -274,10 +268,11 @@ footer {
   -webkit-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-  width: 30%;
+  width: 25%;
   text-align: center;
   margin: 1rem 0;
 }
+
 /* Form styling */
 #form-btn:hover {
   background-color: var(--text-color);
@@ -302,14 +297,14 @@ footer {
   margin: auto;
   padding: 20px;
   border: 1px solid var(--border-color);
-  width: 60%;
+  width: 50%;
   border-radius: 10px;
   text-align: left
 }
 #contact-form label {
   display: block;
   margin-bottom: 10px;
-  color: black;
+  color: var(--text-color);
 }
 #contact-form input, #contact-form textarea {
   width: 100%;
@@ -329,6 +324,7 @@ footer {
   resize: vertical;
 }
 #close-btn {
+  color: var(--text-color);
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -342,7 +338,7 @@ footer {
 }
 #submit-btn {
   background-color: var(--link-color);
-  color: black;
+  color: lightblue;
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
