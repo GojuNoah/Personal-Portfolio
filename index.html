@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,101 +9,150 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="header-title">
-      <h1>Noah Stone</h1>
-      <p>Engineering My Future in Code</p>
-    </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-      <div class="theme-switch-wrapper">
-        <button id="theme-toggle" aria-label="Toggle dark mode">
-            🌙
-        </button>
+  <!-- Modern sticky header with navigation and theme toggle -->
+  <header class="site-header">
+    <div class="container header-flex">
+      <div class="header-title">
+        <h1>Noah Stone</h1>
+        <p class="subtitle">Engineering My Future in Code</p>
       </div>
-    </nav>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="theme-switch-wrapper">
+            <!-- JS: Toggle dark/light mode here -->
+            <button id="theme-toggle" aria-label="Toggle dark mode">
+              🌙
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <div class="stars"></div>
-  <div class="shooting-star"></div>
-  <div class="shooting-star"></div>
-  <div class="shooting-star"></div>
-  <div class="shooting-star"></div>
-  <div class="shooting-star"></div>
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I'm Noah, a Computer Science student graduating in Summer 2026. 
-      I'm currently making the transition from factory work to a career in software development, driven by a passion for problem-solving and building useful digital tools.</p>
-  </section>
+  
+  <main>
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="about-flex">
+          <img src="assets/images/pfp.JPG" alt="Noah Stone profile picture" class="profile-img" />
+          <div>
+            <h2>About Me</h2>
+            <p>I'm Noah, a Computer Science student graduating in Summer 2026.<br>
+              I'm currently making the transition from factory work to a career in software development, driven by a passion for problem-solving and building useful digital tools.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Technical Documentation Page on Responsive Web Design</h3>
-      <p>This is a project from freeCodeCamp's Responsive Web Design certification.</p>
-      <a href="https://technical-documentation-pages.netlify.app/" target="_blank">Live Demo</a>
-      <a href="https://github.com/GojuNoah/Technical-Documentation-Page" target="_blank">GitHub</a>
-    </div>
-    <div class="project">
-      <h3>String Palindrome Checker</h3>
-      <p>This is the first certification project from freeCodeCamp's JavaScript DSA Certification.</p>
-      <a href="https://fcc-palindrome-project.netlify.app/">Live Demo</a>
-      <a href="https://github.com/GojuNoah/fCC-Palindrome-Project/tree/main">GitHub</a>
-    </div>
-    <div class="project">
-      <h3>Iconic Flavor Vault</h3>
-      <p>Iconic Flavor Vault is a recipe collection site, tailored for those into fitness.</p>
-      <a href="https://iconicflavorvault.netlify.app/">Live Demo</a>
-      <a href="https://github.com/GojuNoah/Iconic-Flavor-Vault">GitHub</a>
-    </div>
-  </section>
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <!-- Project Card Example -->
+          <article class="project-card">
+            <h3>Technical Documentation Page on Responsive Web Design</h3>
+            <p>This is a project from freeCodeCamp's Responsive Web Design certification.</p>
+            <div class="project-links">
+              <a href="https://technical-documentation-pages.netlify.app/" target="_blank">Live Demo</a>
+              <a href="https://github.com/GojuNoah/Technical-Documentation-Page" target="_blank">GitHub</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <h3>String Palindrome Checker</h3>
+            <p>This is the first certification project from freeCodeCamp's JavaScript DSA Certification.</p>
+            <div class="project-links">
+              <a href="https://fcc-palindrome-project.netlify.app/" target="_blank">Live Demo</a>
+              <a href="https://github.com/GojuNoah/fCC-Palindrome-Project/tree/main" target="_blank">GitHub</a>
+            </div>
+          </article>
+          <article class="project-card">
+            <h3>Iconic Flavor Vault</h3>
+            <p>Iconic Flavor Vault is a recipe collection site, tailored for those into fitness.</p>
+            <div class="project-links">
+              <a href="https://iconicflavorvault.netlify.app/" target="_blank">Live Demo</a>
+              <a href="https://github.com/GojuNoah/Iconic-Flavor-Vault" target="_blank">GitHub</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <p>✅ HTML | ✅ CSS | ✅ JavaScript | ✅ Responsive Design<br>
-       ⚙️ Currently Learning: APIs, error handling</p>
-  </section>
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+          <li>✅ HTML</li>
+          <li>✅ CSS</li>
+          <li>✅ JavaScript</li>
+          <li>✅ Responsive Design</li>
+        </ul>
+        <p class="learning">⚙️ Currently Learning: APIs, error handling</p>
+      </div>
+    </section>
 
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <p>✅ Responsive Web Design Certification from freeCodeCamp</p>
-    <p>✅ (In progress) JavaScript Algorithms and Data Structures Certification from freeCodeCamp</p>
-  </section>
+    <!-- Certifications Section -->
+    <section id="certifications" class="section cert-section">
+      <div class="container">
+        <h2>Certifications</h2>
+        <ul class="cert-list">
+          <li>✅ Responsive Web Design Certification from freeCodeCamp</li>
+          <li>✅ (In progress) JavaScript Algorithms and Data Structures Certification from freeCodeCamp</li>
+        </ul>
+      </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact Information</h2>
-    <p>
-      <a href="https://github.com/GojuNoah" target="_blank">GitHub</a> |
-      <a href="https://www.linkedin.com/in/noah-stone-5b3689190/" target="_blank">LinkedIn</a> |
-      <a href="#">Resume</a>
-    </p>
-  </section>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="contact-links">
+          <a href="https://github.com/GojuNoah" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/noah-stone-5b3689190/" target="_blank">LinkedIn</a>
+          <a href="#">Resume</a>
+        </div>
+        <!-- JS: Open modal contact form on button click -->
+        <button id="form-btn" class="primary-btn">Send me an email</button>
+      </div>
+    </section>
+  </main>
 
-  <footer>
-    <button id="form-btn">Send me an email</button>
-    <div id="form-container" role="dialog" aria-modal="true" aria-labelledby="contact-title" style="display:none;">
-      <form id="contact-form" novalidate action="https://api.postcatch.io/submit/9fad523e-6dca-4623-8e73-7805446f134c" method="POST">
-        <h3 id="contact-title" class="sr-only">Contact form</h3>
-        <input type="hidden" name="_next" value="/thank-you" />
+  <!-- Modal Contact Form (hidden by default) -->
+  <div id="form-container" class="modal" role="dialog" aria-modal="true" aria-labelledby="contact-title" style="display:none;">
+    <form id="contact-form" novalidate action="https://api.postcatch.io/submit/9fad523e-6dca-4623-8e73-7805446f134c" method="POST">
+      <h3 id="contact-title" class="sr-only">Contact form</h3>
+      <input type="hidden" name="_next" value="/thank-you" />
 
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required placeholder="Enter your name" />
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required placeholder="Enter your name" />
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required placeholder="Enter your email" />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required placeholder="Enter your email" />
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required placeholder="Feedback on website, why you're contacting me...etc"></textarea>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required placeholder="Feedback on website, why you're contacting me...etc"></textarea>
 
-        <button type="submit" id="submit-btn">Send</button>
-        <button type="button" id="close-btn">Close</button>
-        <p id="form-status" role="status" aria-live="polite"></p>
+      <div class="form-actions">
+        <button type="submit" id="submit-btn" class="primary-btn">Send</button>
+        <!-- JS: Close modal on click -->
+        <button type="button" id="close-btn" class="secondary-btn">Close</button>
+      </div>
+      <p id="form-status" role="status" aria-live="polite"></p>
     </form>
   </div>
-  <p>Built with ❤️ by Noah</p>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Built with ❤️ by Noah</p>
+    </div>
   </footer>
+
+  <!-- JS: Add your script.js for interactivity (theme toggle, modal, etc.) -->
   <script src="script.js"></script>
 </body>
 </html>

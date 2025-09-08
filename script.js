@@ -1,4 +1,3 @@
-
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 const formBtn = document.getElementById('form-btn');
@@ -26,14 +25,15 @@ themeToggle.addEventListener('click', () => {
     themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
 });
 
-// Show contact form
+// Show form container
 formBtn.addEventListener('click', () => {
     formContainer.style.display = 'flex';
 });
 
-// hide contact form
+// hide form container & clear on close
 closeBtn.addEventListener('click', () => {
     formContainer.style.display = 'none';
+    contactForm.reset();
 });
 
 async function onSubmit(e) {
