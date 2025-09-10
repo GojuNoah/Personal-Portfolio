@@ -8,7 +8,7 @@
 
 I'm a Web Developer passionate about building digital solutions that live on the internet. I enjoy working across the entire stack but have a particular love for creating intuitive user interfaces.
 
-- 🔭 I’m currently working on **[@GojuNoah/Personal-Portfolio](https://github.com/GojuNoah/Personal-Portfolio)**
+- 🔭 I’m currently working on **[@GojuNoah/Iconic-Flavor-Vault](https://github.com/GojuNoah/Iconic-Flavor-Vault)**
 - 🌱 I’m currently learning **JavaScript**
 - 👯 I’m looking to collaborate on **open-source projects related to developer tooling**
 - 🤔 I’m looking for help with **Backend Development**
